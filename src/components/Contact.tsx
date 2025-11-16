@@ -3,9 +3,9 @@ import { Mail, Linkedin, Github, Twitter } from "lucide-react";
 
 const Contact = () => {
   const socials = [
-    { icon: Mail, label: "Email", href: "mailto:your.email@example.com" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-    { icon: Github, label: "GitHub", href: "https://github.com" },
+    { icon: Mail, label: "Email", href: "mailto:deshmukhv.vishwajeet@gmail.com" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/vishwajeetd" },
+    { icon: Github, label: "GitHub", href: "https://github.com/vishwajeetd" },
     { icon: Twitter, label: "Twitter", href: "https://twitter.com" }
   ];
 
@@ -41,17 +41,20 @@ const Contact = () => {
               Prefer email? Drop me a line at:
             </p>
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:deshmukhv.vishwajeet@gmail.com"
               className="text-2xl font-semibold text-primary hover:text-secondary transition-smooth"
             >
-              your.email@example.com
+              deshmukhv.vishwajeet@gmail.com
             </a>
+            <p className="text-muted-foreground mt-4">
+              Phone: +91 9421464605
+            </p>
           </div>
         </div>
       </div>
       
       <footer className="mt-20 pt-8 border-t border-border text-center text-muted-foreground">
-        <p>&copy; 2024 Your Name. Built with React & Tailwind CSS</p>
+        <p>&copy; 2024 Vishwajeet Deshmukh. Backend Software Engineer @ Jio Platforms</p>
       </footer>
     </section>
   );
