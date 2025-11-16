@@ -22,13 +22,13 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 z-10 text-center animate-fade-in">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-          Hi, I'm Your Name
+          Hi, I'm Vishwajeet Deshmukh
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           Backend Software Engineer
         </p>
         <p className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto">
-          Building scalable, high-performance APIs and distributed systems
+          Designing scalable microservices with Go | Building distributed systems at Jio Platforms
         </p>
         
         <div className="flex gap-4 justify-center flex-wrap">

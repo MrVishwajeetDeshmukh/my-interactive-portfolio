@@ -1,16 +1,16 @@
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Languages",
-      skills: ["Java", "Python", "Node.js", "Go", "SQL"]
+      title: "Languages & Frameworks",
+      skills: ["Go (Golang)", "Python", "Fiber", "Gin", "net/http", "Gorilla Mux"]
     },
     {
-      title: "Backend & Databases",
-      skills: ["Spring Boot", "Express.js", "PostgreSQL", "MongoDB", "Redis"]
+      title: "Databases & Messaging",
+      skills: ["ScyllaDB", "MySQL", "Redis", "Kafka", "WebSocket"]
     },
     {
-      title: "DevOps & Tools",
-      skills: ["Docker", "Kubernetes", "AWS/GCP", "Git", "CI/CD"]
+      title: "Cloud & DevOps",
+      skills: ["GCP", "Kubernetes", "Docker", "Git", "CI/CD", "Linux"]
     }
   ];
 

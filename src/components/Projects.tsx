@@ -7,26 +7,26 @@ import project3 from "@/assets/project-3.jpg";
 const Projects = () => {
   const projects = [
     {
-      title: "Microservices API Gateway",
-      description: "Scalable API gateway handling 10K+ requests/sec with rate limiting and authentication",
+      title: "JioCX RCS Platform",
+      description: "India's leading CPaaS platform handling millions of messages daily. Built REST APIs and microservices in Go with Kubernetes deployment.",
       image: project1,
-      tags: ["Java", "Spring Boot", "Redis"],
+      tags: ["Go", "Kubernetes", "Kafka", "Redis"],
       github: "#",
       demo: "#"
     },
     {
-      title: "E-Commerce Backend",
-      description: "RESTful API service with payment processing, order management, and inventory tracking",
+      title: "Microservices Refactoring",
+      description: "Refactored monolithic modules into scalable microservices. Integrated Kafka for async communication and migrated to ScyllaDB.",
       image: project2,
-      tags: ["Node.js", "PostgreSQL", "Stripe"],
+      tags: ["Go", "ScyllaDB", "MySQL", "Kafka"],
       github: "#",
       demo: "#"
     },
     {
-      title: "Real-Time Chat Service",
-      description: "WebSocket-based messaging system with message queues and horizontal scaling",
+      title: "Face Mask Detector",
+      description: "Real-time mask detection system using deep learning and computer vision. Achieved 95% accuracy with CNN and TensorFlow.",
       image: project3,
-      tags: ["Python", "FastAPI", "MongoDB"],
+      tags: ["Python", "TensorFlow", "OpenCV"],
       github: "#",
       demo: "#"
     }

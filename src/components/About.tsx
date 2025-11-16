@@ -25,9 +25,10 @@ const About = () => {
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            I'm a backend engineer passionate about building efficient, scalable systems. 
-            With expertise in server-side technologies and databases, I design and develop 
-            robust APIs and microservices that power modern applications.
+            Backend Software Engineer experienced in designing scalable microservices using Golang. 
+            Strong background in distributed systems, RESTful APIs, Kubernetes, and real-time messaging platforms. 
+            Adept at performance optimization, system reliability, and production-grade deployment. 
+            Quick learner, team player, and effective communicator with a passion for problem solving.
           </p>
         </div>
         
