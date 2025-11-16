@@ -25,10 +25,10 @@ const Hero = () => {
           Hi, I'm Your Name
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Full-Stack Developer & Creative Problem Solver
+          Backend Software Engineer
         </p>
         <p className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto">
-          Building beautiful, functional web experiences that make a difference
+          Building scalable, high-performance APIs and distributed systems
         </p>
         
         <div className="flex gap-4 justify-center flex-wrap">

@@ -4,18 +4,18 @@ const About = () => {
   const features = [
     {
       icon: Code,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable code with best practices and modern frameworks"
+      title: "System Design",
+      description: "Architecting scalable backend systems with microservices and distributed architectures"
     },
     {
       icon: Palette,
-      title: "UI/UX Design",
-      description: "Creating beautiful, intuitive interfaces that users love to interact with"
+      title: "API Development",
+      description: "Building robust RESTful and GraphQL APIs with comprehensive documentation"
     },
     {
       icon: Rocket,
       title: "Performance",
-      description: "Optimizing applications for speed, efficiency, and seamless user experience"
+      description: "Optimizing database queries, caching strategies, and service response times"
     }
   ];
 
@@ -25,9 +25,9 @@ const About = () => {
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            I'm a passionate developer with a love for creating exceptional digital experiences. 
-            With expertise in modern web technologies, I transform ideas into elegant solutions 
-            that combine functionality with beautiful design.
+            I'm a backend engineer passionate about building efficient, scalable systems. 
+            With expertise in server-side technologies and databases, I design and develop 
+            robust APIs and microservices that power modern applications.
           </p>
         </div>
         
