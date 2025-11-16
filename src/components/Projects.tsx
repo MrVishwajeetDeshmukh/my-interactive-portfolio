@@ -7,26 +7,26 @@ import project3 from "@/assets/project-3.jpg";
 const Projects = () => {
   const projects = [
     {
-      title: "Analytics Dashboard",
-      description: "A comprehensive analytics platform with real-time data visualization and reporting",
+      title: "Microservices API Gateway",
+      description: "Scalable API gateway handling 10K+ requests/sec with rate limiting and authentication",
       image: project1,
-      tags: ["React", "TypeScript", "D3.js"],
+      tags: ["Java", "Spring Boot", "Redis"],
       github: "#",
       demo: "#"
     },
     {
-      title: "E-Commerce Platform",
-      description: "Modern online store with seamless checkout experience and inventory management",
+      title: "E-Commerce Backend",
+      description: "RESTful API service with payment processing, order management, and inventory tracking",
       image: project2,
-      tags: ["Next.js", "Stripe", "PostgreSQL"],
+      tags: ["Node.js", "PostgreSQL", "Stripe"],
       github: "#",
       demo: "#"
     },
     {
-      title: "Social Connect App",
-      description: "Mobile-first social platform with real-time messaging and content sharing",
+      title: "Real-Time Chat Service",
+      description: "WebSocket-based messaging system with message queues and horizontal scaling",
       image: project3,
-      tags: ["React Native", "Firebase", "Redux"],
+      tags: ["Python", "FastAPI", "MongoDB"],
       github: "#",
       demo: "#"
     }
