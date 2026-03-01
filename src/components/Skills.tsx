@@ -1,51 +1,66 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 const Skills = () => {
-  const skillCategories = [
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const categories = [
     {
       title: "Languages & Frameworks",
-      skills: ["Go (Golang)", "Python", "Fiber", "Gin", "net/http", "Gorilla Mux"]
+      skills: ["Go (Golang)", "Python", "Fiber", "Gin", "net/http", "Gorilla Mux"],
     },
     {
       title: "Databases & Messaging",
-      skills: ["ScyllaDB", "MySQL", "Redis", "Kafka", "WebSocket"]
+      skills: ["ScyllaDB", "MySQL", "Redis", "Kafka", "WebSocket"],
     },
     {
       title: "Cloud & DevOps",
-      skills: ["GCP", "Kubernetes", "Docker", "Git", "CI/CD", "Linux"]
-    }
+      skills: ["GCP", "Kubernetes", "Docker", "Git", "CI/CD", "Linux"],
+    },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Skills & Technologies</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Constantly learning and adapting to new technologies
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {skillCategories.map((category, index) => (
-            <div
+    <section id="skills" className="py-32 md:py-44 px-6">
+      <div className="max-w-5xl mx-auto" ref={ref}>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          className="text-sm tracking-widest uppercase text-primary mb-4 text-center"
+        >
+          Skills
+        </motion.p>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-6xl lg:text-7xl font-bold text-center text-gradient leading-tight mb-20"
+        >
+          The toolkit.
+        </motion.h2>
+
+        <div className="grid md:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden">
+          {categories.map((cat, index) => (
+            <motion.div
               key={index}
-              className="bg-card p-8 rounded-lg card-shadow animate-slide-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+              className="bg-background p-8 md:p-10"
             >
-              <h3 className="text-2xl font-semibold mb-6 text-primary">{category.title}</h3>
-              <div className="space-y-3">
-                {category.skills.map((skill, skillIndex) => (
-                  <div
-                    key={skillIndex}
-                    className="flex items-center gap-3 group"
+              <h3 className="text-lg font-semibold text-foreground mb-6">{cat.title}</h3>
+              <div className="flex flex-wrap gap-2">
+                {cat.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-2 text-sm bg-accent text-muted-foreground rounded-full border border-border hover:text-foreground hover:border-primary/30 transition-smooth cursor-default"
                   >
-                    <div className="w-2 h-2 rounded-full bg-secondary group-hover:scale-150 transition-smooth" />
-                    <span className="text-muted-foreground group-hover:text-foreground transition-smooth">
-                      {skill}
-                    </span>
-                  </div>
+                    {skill}
+                  </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
