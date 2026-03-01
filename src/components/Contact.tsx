@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const Contact = () => {
   const socials = [
     { icon: Mail, label: "Email", href: "mailto:deshmukhv.vishwajeet@gmail.com" },
     { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/vishwajeetd" },
     { icon: Github, label: "GitHub", href: "https://github.com/vishwajeetd" },
-    { icon: Twitter, label: "Twitter", href: "https://twitter.com" }
+    
   ];
 
   return (
