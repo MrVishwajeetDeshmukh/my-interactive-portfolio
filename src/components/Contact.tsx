@@ -46,7 +46,7 @@ const Contact = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
           href="mailto:deshmukhv.vishwajeet@gmail.com"
-          className="inline-block text-2xl md:text-4xl font-semibold text-gradient-blue hover:opacity-80 transition-smooth mb-16"
+          className="inline-block text-lg sm:text-2xl md:text-4xl font-semibold text-gradient-blue hover:opacity-80 transition-smooth mb-16 break-all sm:break-normal px-2"
         >
           deshmukhv.vishwajeet@gmail.com
         </motion.a>
@@ -77,14 +77,14 @@ const Contact = () => {
           transition={{ delay: 0.6 }}
           className="text-sm text-muted-foreground"
         >
-          +91 9421464605
+          +91 8779619155
         </motion.p>
       </div>
 
       <footer className="mt-32 pt-8 text-center">
         <div className="section-divider mb-8" />
         <p className="text-xs text-muted-foreground">
-          © 2024 Vishwajeet Deshmukh
+          © 2026 Vishwajeet Deshmukh
         </p>
       </footer>
     </section>

@@ -16,7 +16,7 @@ const Hero = () => {
           Backend Software Engineer
         </p>
 
-        <h1 className="text-gradient text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.9] mb-8">
+        <h1 className="text-gradient text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.9] mb-8">
           Vishwajeet
           <br />
           Deshmukh
@@ -37,17 +37,17 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="flex gap-5 justify-center"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center w-full px-4 sm:px-0"
         >
           <a
             href="#projects"
-            className="px-8 py-3.5 bg-foreground text-background text-sm font-medium rounded-full hover:opacity-80 transition-smooth"
+            className="w-full sm:w-auto px-8 py-3.5 bg-foreground text-background text-sm font-medium rounded-full hover:opacity-80 transition-smooth"
           >
             View My Work
           </a>
           <a
             href="#contact"
-            className="px-8 py-3.5 border border-border text-sm font-medium rounded-full text-foreground hover:bg-accent transition-smooth"
+            className="w-full sm:w-auto px-8 py-3.5 border border-border text-sm font-medium rounded-full text-foreground hover:bg-accent transition-smooth"
           >
             Get in Touch
           </a>

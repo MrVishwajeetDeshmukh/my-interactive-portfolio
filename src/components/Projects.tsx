@@ -30,7 +30,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-32 md:py-44 px-6">
+    <section id="projects" className="py-20 md:py-44 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto" ref={ref}>
         <motion.p
           initial={{ opacity: 0 }}
@@ -44,7 +44,7 @@ const Projects = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-center text-gradient leading-tight mb-20"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-center text-gradient leading-tight mb-12 sm:mb-20"
         >
           Built to perform.
         </motion.h2>
@@ -56,7 +56,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 + index * 0.1 }}
-              className="group relative bg-card rounded-2xl p-8 md:p-12 border border-border hover:border-primary/30 transition-smooth overflow-hidden"
+              className="group relative bg-card rounded-2xl p-6 sm:p-8 md:p-12 border border-border hover:border-primary/30 transition-smooth overflow-hidden"
             >
               {/* Hover glow */}
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(210_100%_50%_/_0.05)_0%,_transparent_60%)] opacity-0 group-hover:opacity-100 transition-smooth" />

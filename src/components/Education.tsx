@@ -29,7 +29,7 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-32 md:py-44 px-6">
+    <section id="education" className="py-20 md:py-44 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto" ref={ref}>
         <motion.p
           initial={{ opacity: 0 }}
@@ -43,7 +43,7 @@ const Education = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-center text-gradient leading-tight mb-20"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-center text-gradient leading-tight mb-12 sm:mb-20"
         >
           The foundation.
         </motion.h2>
@@ -55,7 +55,7 @@ const Education = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              className="flex flex-col md:flex-row md:items-baseline justify-between bg-card rounded-2xl p-8 border border-border"
+              className="flex flex-col md:flex-row md:items-baseline justify-between bg-card rounded-2xl p-6 sm:p-8 border border-border"
             >
               <div>
                 <h3 className="text-xl md:text-2xl font-semibold text-foreground">{edu.degree}</h3>

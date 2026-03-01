@@ -32,7 +32,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-32 md:py-44 px-6">
+    <section id="experience" className="py-20 md:py-44 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto" ref={ref}>
         <motion.p
           initial={{ opacity: 0 }}
@@ -46,7 +46,7 @@ const Experience = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-center text-gradient leading-tight mb-20"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-center text-gradient leading-tight mb-12 sm:mb-20"
         >
           Where I've worked.
         </motion.h2>
