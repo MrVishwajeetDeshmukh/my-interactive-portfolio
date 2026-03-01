@@ -1,90 +1,91 @@
-import { GraduationCap } from "lucide-react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Education = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   const education = [
     {
-      degree: "B.E. in Electronics & Telecommunication Engineering",
+      degree: "B.E. in Electronics & Telecommunication",
       institution: "Savitribai Phule Pune University",
       college: "SCOE, Pune",
       grade: "CGPA: 8.22",
-      year: "May 2023"
+      year: "2023",
     },
     {
-      degree: "Diploma in Electronics & Telecommunication Engineering",
+      degree: "Diploma in E&TC",
       institution: "MSBTE",
       college: "SVIP, Latur",
       grade: "78.24%",
-      year: "Nov 2020"
-    }
+      year: "2020",
+    },
   ];
 
   const certifications = [
-    "Google Cloud Essentials – Qwiklabs (2023)",
-    "Programming with Go Specialization – Coursera (2023)",
-    "Linux Command Line Basics – Coursera (2022)"
+    "Google Cloud Essentials – Qwiklabs",
+    "Programming with Go Specialization – Coursera",
+    "Linux Command Line Basics – Coursera",
   ];
 
   return (
-    <section id="education" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Education & Certifications</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Academic background and professional certifications
-          </p>
-        </div>
-        
-        <div className="max-w-5xl mx-auto">
-          {/* Education */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-semibold mb-8 text-primary">Education</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {education.map((edu, index) => (
-                <div
-                  key={index}
-                  className="bg-card p-6 rounded-lg card-shadow hover:card-hover-shadow transition-smooth animate-scale-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg gradient-hero flex items-center justify-center flex-shrink-0">
-                      <GraduationCap className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-lg mb-2">{edu.degree}</h4>
-                      <p className="text-primary font-medium mb-1">{edu.institution}</p>
-                      <p className="text-sm text-muted-foreground mb-2">{edu.college}</p>
-                      <div className="flex justify-between items-center text-sm">
-                        <span className="text-secondary font-medium">{edu.grade}</span>
-                        <span className="text-muted-foreground">{edu.year}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+    <section id="education" className="py-32 md:py-44 px-6">
+      <div className="max-w-4xl mx-auto" ref={ref}>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          className="text-sm tracking-widest uppercase text-primary mb-4 text-center"
+        >
+          Education
+        </motion.p>
 
-          {/* Certifications */}
-          <div>
-            <h3 className="text-2xl font-semibold mb-8 text-primary">Certifications</h3>
-            <div className="bg-card p-8 rounded-lg card-shadow">
-              <ul className="space-y-4">
-                {certifications.map((cert, index) => (
-                  <li 
-                    key={index} 
-                    className="flex items-start gap-3 group animate-slide-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <span className="text-secondary mt-1 text-xl group-hover:scale-125 transition-smooth">✓</span>
-                    <span className="text-muted-foreground group-hover:text-foreground transition-smooth">
-                      {cert}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-6xl lg:text-7xl font-bold text-center text-gradient leading-tight mb-20"
+        >
+          The foundation.
+        </motion.h2>
+
+        <div className="space-y-6 mb-20">
+          {education.map((edu, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+              className="flex flex-col md:flex-row md:items-baseline justify-between bg-card rounded-2xl p-8 border border-border"
+            >
+              <div>
+                <h3 className="text-xl md:text-2xl font-semibold text-foreground">{edu.degree}</h3>
+                <p className="text-muted-foreground mt-1">{edu.institution} · {edu.college}</p>
+              </div>
+              <div className="flex items-center gap-4 mt-3 md:mt-0 shrink-0">
+                <span className="text-primary font-medium">{edu.grade}</span>
+                <span className="text-muted-foreground text-sm">{edu.year}</span>
+              </div>
+            </motion.div>
+          ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h3 className="text-lg font-semibold text-foreground mb-6">Certifications</h3>
+          <div className="flex flex-wrap gap-3">
+            {certifications.map((cert) => (
+              <span
+                key={cert}
+                className="px-5 py-2.5 text-sm bg-card border border-border rounded-full text-muted-foreground"
+              >
+                {cert}
+              </span>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

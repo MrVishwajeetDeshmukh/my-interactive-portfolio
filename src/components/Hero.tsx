@@ -1,58 +1,74 @@
-import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { motion } from "framer-motion";
 
 const Hero = () => {
-  const scrollToProjects = () => {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
+      {/* Subtle radial glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(210_100%_50%_/_0.08)_0%,_transparent_70%)]" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+        className="relative z-10 text-center max-w-5xl"
       >
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
-      </div>
-      
-      <div className="container mx-auto px-4 z-10 text-center animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-          Hi, I'm Vishwajeet Deshmukh
-        </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <p className="text-sm md:text-base tracking-widest uppercase text-muted-foreground mb-6">
           Backend Software Engineer
         </p>
-        <p className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto">
-          Designing scalable microservices with Go | Building distributed systems at Jio Platforms
-        </p>
-        
-        <div className="flex gap-4 justify-center flex-wrap">
-          <Button 
-            size="lg" 
-            className="gradient-hero text-primary-foreground hover:opacity-90 transition-smooth"
-            onClick={scrollToProjects}
+
+        <h1 className="text-gradient text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.9] mb-8">
+          Vishwajeet
+          <br />
+          Deshmukh
+        </h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto mb-12"
+        >
+          Designing scalable microservices with Go.
+          <br className="hidden sm:block" />
+          Building distributed systems at Jio Platforms.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="flex gap-5 justify-center"
+        >
+          <a
+            href="#projects"
+            className="px-8 py-3.5 bg-foreground text-background text-sm font-medium rounded-full hover:opacity-80 transition-smooth"
           >
             View My Work
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline"
-            className="border-primary text-primary hover:bg-accent transition-smooth"
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+          </a>
+          <a
+            href="#contact"
+            className="px-8 py-3.5 border border-border text-sm font-medium rounded-full text-foreground hover:bg-accent transition-smooth"
           >
-            Get In Touch
-          </Button>
+            Get in Touch
+          </a>
+        </motion.div>
+      </motion.div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5 }}
+        className="absolute bottom-10"
+      >
+        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-1.5">
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className="w-1.5 h-1.5 rounded-full bg-muted-foreground"
+          />
         </div>
-        
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-primary" />
-        </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

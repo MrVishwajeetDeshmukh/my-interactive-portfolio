@@ -1,20 +1,23 @@
-import { Briefcase, Calendar } from "lucide-react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Experience = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   const experiences = [
     {
       role: "Software Development Engineer (Back-end)",
       company: "Jio Platforms Limited",
-      location: "Navi Mumbai, India",
+      location: "Navi Mumbai",
       duration: "Oct 2023 – Present",
       achievements: [
         "Developed REST APIs and microservices in Go for India's leading CPaaS platform handling millions of messages per day",
-        "Refactored existing monolithic modules into scalable microservices improving maintainability and code reuse",
+        "Refactored monolithic modules into scalable microservices improving maintainability and code reuse",
         "Designed and deployed Kubernetes cluster ensuring high availability and increase in uptime",
         "Integrated Kafka for asynchronous communication, increasing system responsiveness during traffic spikes",
         "Reduced API response time by tuning MySQL queries, implementing Redis caching, and migrating to ScyllaDB",
-        "Participated in architecture discussions and agile ceremonies with cross-functional teams"
-      ]
+      ],
     },
     {
       role: "Cyber Security Intern",
@@ -23,52 +26,61 @@ const Experience = () => {
       duration: "Dec 2022 – Feb 2023",
       achievements: [
         "Explored data security techniques including steganography, encoding, and digital forensics tools",
-        "Completed hands-on labs focused on threat detection, information security, and confidentiality"
-      ]
-    }
+        "Completed hands-on labs focused on threat detection, information security, and confidentiality",
+      ],
+    },
   ];
 
   return (
-    <section id="experience" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Work Experience</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Building scalable backend systems and solving complex challenges
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto space-y-8">
+    <section id="experience" className="py-32 md:py-44 px-6">
+      <div className="max-w-4xl mx-auto" ref={ref}>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          className="text-sm tracking-widest uppercase text-primary mb-4 text-center"
+        >
+          Experience
+        </motion.p>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-6xl lg:text-7xl font-bold text-center text-gradient leading-tight mb-20"
+        >
+          Where I've worked.
+        </motion.h2>
+
+        <div className="space-y-16">
           {experiences.map((exp, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-card p-8 rounded-lg card-shadow hover:card-hover-shadow transition-smooth animate-slide-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.2 + index * 0.15 }}
+              className="relative"
             >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold text-foreground mb-2">{exp.role}</h3>
-                  <div className="flex items-center gap-2 text-primary mb-2">
-                    <Briefcase className="w-5 h-5" />
-                    <span className="font-medium">{exp.company}</span>
-                    <span className="text-muted-foreground">• {exp.location}</span>
-                  </div>
+              <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-6">
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-semibold text-foreground">{exp.role}</h3>
+                  <p className="text-primary text-lg mt-1">{exp.company} <span className="text-muted-foreground">· {exp.location}</span></p>
                 </div>
-                <div className="flex items-center gap-2 text-muted-foreground mt-2 md:mt-0">
-                  <Calendar className="w-4 h-4" />
-                  <span className="text-sm">{exp.duration}</span>
-                </div>
+                <span className="text-sm text-muted-foreground mt-2 md:mt-0 shrink-0">{exp.duration}</span>
               </div>
-              
-              <ul className="space-y-3">
-                {exp.achievements.map((achievement, achIndex) => (
-                  <li key={achIndex} className="flex gap-3">
-                    <span className="text-secondary mt-1.5">▹</span>
-                    <span className="text-muted-foreground flex-1">{achievement}</span>
+
+              <ul className="space-y-4">
+                {exp.achievements.map((a, i) => (
+                  <li key={i} className="flex gap-4 text-muted-foreground leading-relaxed">
+                    <span className="text-primary mt-1.5 text-xs">●</span>
+                    <span>{a}</span>
                   </li>
                 ))}
               </ul>
-            </div>
+
+              {index < experiences.length - 1 && (
+                <div className="section-divider mt-16" />
+              )}
+            </motion.div>
           ))}
         </div>
       </div>
