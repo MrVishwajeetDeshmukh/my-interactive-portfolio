@@ -47,7 +47,7 @@ const Skills = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              className="bg-background p-6 sm:p-8 md:p-10"
+              className="bg-background/40 backdrop-blur-md p-6 sm:p-8 md:p-10"
             >
               <h3 className="text-lg font-semibold text-foreground mb-6">{cat.title}</h3>
               <div className="flex flex-wrap gap-2">

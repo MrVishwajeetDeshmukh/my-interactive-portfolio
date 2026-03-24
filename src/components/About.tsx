@@ -51,7 +51,7 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}
-              className="bg-background p-6 sm:p-8 md:p-12 text-center"
+              className="bg-background/40 backdrop-blur-md p-6 sm:p-8 md:p-12 text-center"
             >
               <div className="text-3xl md:text-5xl font-bold text-foreground mb-2">{stat.value}</div>
               <div className="text-xs md:text-sm text-muted-foreground tracking-wide uppercase">{stat.label}</div>
