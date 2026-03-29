@@ -1,28 +1,32 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
-import LiquidEther from "@/components/ui/LiquidEther";
+
+const LiquidEther = lazy(() => import("@/components/ui/LiquidEther"));
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 bg-background">
       {/* Liquid Ether Background */}
-      <div className="absolute inset-0 z-0">
-        <LiquidEther
-          colors={['#5227FF', '#FF9FFC', '#B19EEF']}
-          mouseForce={20}
-          cursorSize={100}
-          isViscous
-          viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
-          isBounce={false}
-          autoDemo
-          autoSpeed={0.5}
-          autoIntensity={2.2}
-          takeoverDuration={0.25}
-          autoResumeDelay={3000}
-          autoRampDuration={0.6}
-        />
+      <div className="absolute inset-0 z-0 opacity-80">
+        <Suspense fallback={<div className="w-full h-full bg-background" />}>
+          <LiquidEther
+            colors={['#5227FF', '#FF9FFC', '#B19EEF']}
+            mouseForce={15}
+            cursorSize={80}
+            isViscous
+            viscous={20}
+            iterationsViscous={16}
+            iterationsPoisson={16}
+            resolution={0.25}
+            isBounce={false}
+            autoDemo
+            autoSpeed={0.5}
+            autoIntensity={2.2}
+            takeoverDuration={0.25}
+            autoResumeDelay={3000}
+            autoRampDuration={0.6}
+          />
+        </Suspense>
       </div>
 
       <motion.div
@@ -62,13 +66,15 @@ const Hero = () => {
             href="#projects"
             className="w-full sm:w-auto px-8 py-3.5 bg-foreground text-background text-sm font-medium rounded-full hover:opacity-80 transition-smooth"
           >
-            View My Work
+            View Projects
           </a>
           <a
-            href="#contact"
-            className="w-full sm:w-auto px-8 py-3.5 border border-border text-sm font-medium rounded-full text-foreground hover:bg-accent transition-smooth"
+            href="https://drive.google.com/file/d/168xav-lw28LG1WdIPQbNFM5wtejnDAd2/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-8 py-3.5 border border-border text-sm font-medium rounded-full text-foreground hover:bg-accent transition-smooth flex items-center justify-center gap-2"
           >
-            Get in Touch
+            Download Resume
           </a>
         </motion.div>
       </motion.div>

@@ -7,16 +7,16 @@ const Skills = () => {
 
   const categories = [
     {
-      title: "Languages & Frameworks",
-      skills: ["Go (Golang)", "Python", "Fiber", "Gin", "net/http", "Gorilla Mux"],
+      title: "Core",
+      skills: ["Go (Golang)", "PostgreSQL", "gRPC", "REST APIs", "Fiber/Gin"],
     },
     {
-      title: "Databases & Messaging",
-      skills: ["ScyllaDB", "MySQL", "Redis", "Kafka", "WebSocket"],
+      title: "Working Knowledge",
+      skills: ["Kubernetes", "Kafka", "Docker", "ScyllaDB", "Redis"],
     },
     {
-      title: "Cloud & DevOps",
-      skills: ["GCP", "Kubernetes", "Docker", "Git", "CI/CD", "Linux"],
+      title: "Exposure",
+      skills: ["Python", "MySQL", "CI/CD", "Linux", "GCP"],
     },
   ];
 

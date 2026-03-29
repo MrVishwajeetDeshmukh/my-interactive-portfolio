@@ -9,7 +9,7 @@ const Contact = () => {
   const socials = [
     { icon: Mail, label: "Email", href: "mailto:deshmukhv.vishwajeet@gmail.com" },
     { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/vishwajeetd" },
-    { icon: Github, label: "GitHub", href: "https://github.com/vishwajeetd" },
+    { icon: Github, label: "GitHub", href: "https://github.com/MrVishwajeetDeshmukh" },
   ];
 
   return (

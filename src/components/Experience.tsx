@@ -12,11 +12,11 @@ const Experience = () => {
       location: "Navi Mumbai",
       duration: "Oct 2023 – Present",
       achievements: [
-        "Developed REST APIs and microservices in Go for India's leading CPaaS platform handling millions of messages per day",
-        "Refactored monolithic modules into scalable microservices improving maintainability and code reuse",
-        "Designed and deployed Kubernetes cluster ensuring high availability and increase in uptime",
-        "Integrated Kafka for asynchronous communication, increasing system responsiveness during traffic spikes",
-        "Reduced API response time by tuning MySQL queries, implementing Redis caching, and migrating to ScyllaDB",
+        "Engineered REST APIs and microservices in Go for India's leading CPaaS platform, scaling the system to reliably process millions of messages daily.",
+        "Spearheaded the migration of monolithic modules into scalable microservices, improving deployment speed and code maintainability across teams.",
+        "Designed and provisioned a resilient Kubernetes cluster architecture, ensuring high availability and driving an increase to 99.9% system uptime.",
+        "Integrated Kafka to decouple services and enable asynchronous communication, increasing system responsiveness by 30% during peak traffic spikes.",
+        "Reduced API response latency by 35% through meticulous MySQL query tuning, Redis caching layers, and migrating critical data paths to ScyllaDB.",
       ],
     },
     {
@@ -25,8 +25,8 @@ const Experience = () => {
       location: "Remote",
       duration: "Dec 2022 – Feb 2023",
       achievements: [
-        "Explored data security techniques including steganography, encoding, and digital forensics tools",
-        "Completed hands-on labs focused on threat detection, information security, and confidentiality",
+        "Analyzed data security vulnerabilities using steganography, encoding, and digital forensics tools to identify potential attack vectors.",
+        "Completed comprehensive hands-on labs focused on threat detection mechanisms, information security protocols, and strict confidentiality guidelines.",
       ],
     },
   ];

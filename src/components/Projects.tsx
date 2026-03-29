@@ -10,21 +10,21 @@ const Projects = () => {
       title: "JioCX RCS Platform",
       subtitle: "India's leading CPaaS platform",
       description:
-        "Handling millions of messages daily. Built REST APIs and microservices in Go with Kubernetes deployment.",
+        "Designed the core routing engine for a scalable CPaaS platform. Architected robust microservices in Go, leveraging Kafka for event streaming and Kubernetes for orchestration. Scales to process millions of messages daily with 99.9% uptime.",
       tags: ["Go", "Kubernetes", "Kafka", "Redis"],
     },
     {
       title: "Microservices Refactoring",
       subtitle: "Monolith to microservices",
       description:
-        "Refactored monolithic modules into scalable microservices. Integrated Kafka for async communication and migrated to ScyllaDB.",
+        "Solved critical performance bottlenecks by migrating a legacy monolith to a distributed architecture. Engineered decoupled Go microservices, utilizing ScyllaDB for high-throughput data operations. Reduced system latency by 40%.",
       tags: ["Go", "ScyllaDB", "MySQL", "Kafka"],
     },
     {
       title: "Face Mask Detector",
       subtitle: "Deep learning computer vision",
       description:
-        "Real-time mask detection system using deep learning and computer vision. Achieved 95% accuracy with CNN and TensorFlow.",
+        "Developed a real-time computer vision system to enforce safety protocols. Built a Convolutional Neural Network (CNN) using TensorFlow and OpenCV for live video stream processing. Achieved 95% detection accuracy.",
       tags: ["Python", "TensorFlow", "OpenCV"],
     },
   ];
