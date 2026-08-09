@@ -28,7 +28,7 @@ const Hero = () => {
           Backend Software Engineer
         </p>
         <p className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto">
-          Designing scalable microservices with Go | Building distributed systems at Jio Platforms
+          Designing scalable microservices with Go | Building distributed systems at Jio Platforms Limited
         </p>
         
         <div className="flex gap-4 justify-center flex-wrap">
