@@ -1,0 +1,9 @@
+// Cloudflare Workers config: serve the Vite build as static files.
+{
+  "name": "my-interactive-portfolio",
+  "compatibility_date": "2025-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
