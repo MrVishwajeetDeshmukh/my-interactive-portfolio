@@ -9,7 +9,7 @@ export const profile = {
   phone: "+91 87796 19155",
   phoneHref: "tel:+918779619155",
   resume:
-    "https://drive.google.com/file/d/1jB8A-Juf87447bU6loXCPtypPbjG_9cV/view?usp=sharing",
+    "https://drive.google.com/file/d/1lRN9SAGO0Seo_bc8VmoIw9FEYLxlcg_t/view?usp=sharing",
   linkedin: "https://linkedin.com/in/vishwajeetd",
   github: "https://github.com/MrVishwajeetDeshmukh",
 };
